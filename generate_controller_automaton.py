@@ -60,7 +60,7 @@ def calculate_transitions(state, x_min, x_max, v_min, v_max, a, dx_atk, default_
     '''
     clamp_v = lambda v: min(max(v, v_min), v_max)
     sign = lambda x: 0 if x == 0 else int(math.copysign(1, x))
-    is_safe = lambda x: x_nxt >= x_min and x_nxt <= x_max
+    is_safe = lambda x: x >= x_min and x <= x_max
 
     x_pre, v_pre, a_pre, = state
 
